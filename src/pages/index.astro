@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Waves from '../icons/Waves.astro';
+import Slider from '../components/Slider';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<main>
-		
+		<Slider client:load/>
 	</main>
 </Layout>
 

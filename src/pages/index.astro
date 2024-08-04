@@ -4,15 +4,19 @@ import Header from '../components/Header.astro';
 import Waves from '../icons/Waves.astro';
 import Slider from '../components/Slider';
 import FoodTypes from '../components/FoodTypes.astro';
+import Flavors from '../components/Flavors.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<main>
 		<Slider client:load/>
-		<div class="flex flex-col bg-[#FDF3E9] items-center justify-center">
+		<section class="flex flex-col bg-[#FDF3E9] items-center justify-center">
 			<FoodTypes />
-		</div>
+		</section>
+		<section class="bg-[#d1ff03] flex flex-row p-10 text-[#192bff] items-center">
+			<Flavors />
+		</section>
 	</main>
 </Layout>
 

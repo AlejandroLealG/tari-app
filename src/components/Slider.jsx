@@ -14,12 +14,13 @@ export default () => {
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       slidesPerView={1}
       loop={true}
-      navigation={
+      navigation
+      /*navigation={
         {
           nextEl: '.swiper-button-next-custom',
           prevEl: '.swiper-button-prev-custom',
         }
-      }
+      }*/
       pagination={{ clickable: true }}
       autoplay={{
         delay: 6000,
@@ -83,8 +84,8 @@ export default () => {
           />
         </picture>
       </SwiperSlide>
-      <div className="swiper-button-next-custom"></div>
-      <div className="swiper-button-prev-custom"></div>
+        {/*<div className="swiper-button-next-custom"></div>
+        <div className="swiper-button-prev-custom"></div>*/}
     </Swiper>
   );
 };

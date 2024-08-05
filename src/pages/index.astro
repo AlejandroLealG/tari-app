@@ -2,26 +2,43 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Waves from '../icons/Waves.astro';
-import Slider from '../components/Slider';
 import FoodTypes from '../components/FoodTypes.astro';
 import Flavors from '../components/Flavors.astro';
 import Origin from '../components/Origin.astro';
+import Peppers from '../components/Peppers.astro';
+import SliderM from '../components/SliderM';
+import SocialSlider from '../components/SocialSlider';
+import Footer from '../components/Footer.astro';
+import Logo from '../icons/Logo.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<main>
-		<Slider client:load/>
+		<SliderM client:load/>
 		<section class="flex flex-col bg-[#FDF3E9] items-center justify-center">
 			<FoodTypes />
 		</section>
 		<section class="bg-[#d1ff03] flex flex-row p-10 text-[#192bff] items-center">
 			<Flavors />
 		</section>
-		<section class="">
+		<section >
 			<Origin />
 		</section>
+		<section class="bg-[#FDF3E9]">
+			<Peppers />
+		</section>
+		<section>
+			<SocialSlider client:load/>
+		</section>
 	</main>
+	<footer class="bg-[#FDF3E9] flex flex-row text-[#192bff]">
+		<Footer />
+	</footer>
+  <div class="bg-[#192bff] flex items-center justify-center">
+    <img src="/images/tari-brand-footer.png" alt="" class="w-[470px] h-[170px]">
+  </div>
+  
 </Layout>
 
 <style>

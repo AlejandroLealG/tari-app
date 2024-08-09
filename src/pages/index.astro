@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Waves from '../icons/Waves.astro';
 import FoodTypes from '../components/FoodTypes.astro';
 import Flavors from '../components/Flavors.astro';
 import Origin from '../components/Origin.astro';
@@ -9,13 +8,15 @@ import Peppers from '../components/Peppers.astro';
 import SliderM from '../components/SliderM';
 import SocialSlider from '../components/SocialSlider';
 import Footer from '../components/Footer.astro';
-import Logo from '../icons/Logo.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<main>
-		<SliderM client:load/>
+		<div class="pt-[130px]">
+			<SliderM client:load/>
+		</div>
+		
 		<section class="flex flex-col bg-[#FDF3E9] items-center justify-center">
 			<FoodTypes />
 		</section>
@@ -28,7 +29,7 @@ import Logo from '../icons/Logo.astro';
 		<section class="bg-[#FDF3E9]">
 			<Peppers />
 		</section>
-		<section>
+		<section class="">
 			<SocialSlider client:load/>
 		</section>
 	</main>
@@ -42,4 +43,5 @@ import Logo from '../icons/Logo.astro';
 </Layout>
 
 <style>
+	
 </style>

@@ -1,11 +1,8 @@
 ---
 import Logo from "../icons/Logo.astro";
-import Waves from "../icons/Waves.astro";
 ---
 
-<header
-  class="bg-[#192bff] flex flex-row items-center justify-between text-white lg:text-2xl"
->
+<header class="fixed w-full z-10 flex flex-row items-center justify-between text-white lg:text-2xl">
   <ul class="flex flex-row gap-6 m-12">
     <li><a href="#">Home</a></li>
     <li><a href="#">Products</a></li>
@@ -24,3 +21,10 @@ import Waves from "../icons/Waves.astro";
     </li>
   </ul>
 </header>
+
+<style>
+  header {
+    background-image: url(/images/nav_pattern.svg);
+    height: 155px;
+  }
+</style>

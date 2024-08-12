@@ -8,6 +8,7 @@ import Peppers from '../components/Peppers.astro';
 import SliderM from '../components/SliderM';
 import SocialSlider from '../components/SocialSlider';
 import Footer from '../components/Footer.astro';
+import TopButton from '../components/TopButton.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -32,6 +33,7 @@ import Footer from '../components/Footer.astro';
 		<section class="">
 			<SocialSlider client:load/>
 		</section>
+		<TopButton />
 	</main>
 	<footer class="bg-[#FDF3E9] flex flex-row text-[#192bff]">
 		<Footer />

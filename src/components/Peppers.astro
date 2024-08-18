@@ -20,25 +20,30 @@
     </picture>
   </div>
 </div>
-<marquee class="gap-4 flex flex-row bg-[#d1ff03]">
-  <div class=" flex flex-row">
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
-    <img src="/images/separator.svg" alt="" class="loop-text">
-    <p class="text-3xl mx-4 text-[#192bff]">Add some heat to social  media</p>
+<marquee class="gap-4 flex flex-row bg-[#d1ff03]" >
+  <div class=" flex flex-row" id="marquee-content">
+    <!--Aqui va el banner infinito -->
   </div>
 </marquee>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const marqueeContent = document.getElementById('marquee-content');
+
+    if (marqueeContent) {
+      for (let i = 0; i < 3; i++) {
+        const img = document.createElement('img');
+        img.src = '/images/separator.svg';
+        img.alt = '';
+        img.classList.add('loop-text');
+        marqueeContent.appendChild(img);
+
+        const p = document.createElement('p');
+        p.classList.add('text-3xl', 'mx-4', 'text-[#192bff]');
+        p.textContent = 'Add some heat to social media';
+        marqueeContent.appendChild(p);
+      }
+    }
+  });
+</script>
 

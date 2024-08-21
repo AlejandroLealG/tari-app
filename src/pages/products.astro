@@ -1,7 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProductType from "../components/ProductsType.astro";
+import MapProduct from "../components/MapProduct.astro";
 ---
 
 <Layout title="Products Tari">
-  <h1>This is the products</h1>
+  <div class="video-container h-[300px]">
+    <h1 class="text-center">Aqui deberia haber un video</h1>
+  </div>
+  <marquee class="gap-4 flex flex-row bg-[#192bff]" >
+    <div class=" flex flex-row" id="marquee-content2">
+      <!--Aqui va el banner infinito -->
+    </div>
+  </marquee>
+  <div>
+    <ProductType />
+  </div>
+  <MapProduct />
+  
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const marqueeContent = document.getElementById('marquee-content2');
+
+    if (marqueeContent) {
+      for (let i = 0; i < 3; i++) {
+        const img = document.createElement('img');
+        img.src = '/images/separator_2.svg';
+        img.alt = '';
+        img.classList.add('loop-text');
+        marqueeContent.appendChild(img);
+
+        const p = document.createElement('p');
+        p.classList.add('text-3xl', 'mx-4', 'text-white');
+        p.textContent = 'Introducing Tari, the creamy Peruvian hot sauce made from peppers found in Peru';
+        marqueeContent.appendChild(p);
+      }
+    }
+  });
+</script>

@@ -2,29 +2,32 @@
 import Logo from "../icons/Logo.astro";
 ---
 
-<header class="fixed w-full z-10 flex flex-row items-center justify-between text-white lg:text-2xl">
-  <ul class="flex flex-row gap-6 m-12">
-    <li><a href="/">Home</a></li>
-    <li><a href="/products/">Products</a></li>
-    <li><a href="/aboutUs/">About Us</a></li>
-  </ul>
-  <div >
-    <Logo />
+<header class="fixed w-full z-20 text-white lg:text-2xl px-6">
+  <div class="flex flex-row items-center justify-between py-5">
+    <ul class="flex flex-row gap-10 mx-6 ">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li><a href="/aboutUs/">About Us</a></li>
+    </ul>
+    <div >
+      <Logo />
+    </div>
+    <ul class="flex flex-row mx-6 gap-10">
+      <li><a href="#">Everything Sauce</a></li>
+      <li><a href="#">Contact</a></li>
+      <li>
+        <picture>
+          <img src="/images/icon-loupe.svg" alt="" class="size-6 mx-2">
+        </picture>
+      </li>
+    </ul>
   </div>
-  <ul class="flex flex-row m-12 gap-6">
-    <li><a href="#">Everything Sauce</a></li>
-    <li><a href="#">Contact</a></li>
-    <li>
-      <picture>
-        <img src="/images/icon-loupe.svg" alt="" class="size-6 mx-2">
-      </picture>
-    </li>
-  </ul>
+  
 </header>
 
 <style>
   header {
     background-image: url(/images/nav_pattern.svg);
-    height: 155px;
+    height: 145px;
   }
 </style>
